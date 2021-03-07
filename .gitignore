@@ -22,6 +22,7 @@ Homestead.json
 ### PhpStorm ###
 
 # User-specific stuff
+.idea/
 .idea/**/workspace.xml
 .idea/**/tasks.xml
 .idea/**/usage.statistics.xml
@@ -54,3 +55,4 @@ out/
 
 # Android studio 3.1+ serialized cache file
 .idea/caches/build_file_checksums.ser
+

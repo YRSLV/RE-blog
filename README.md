@@ -10,3 +10,5 @@
 ## RE-blog Release notes
 
 Version 0.1.0 comprises simple blog starter kit with the implementation for application's login, registration, email verification, two-factor authentication, session management and API via Laravel Sanctum.
+
+Release 0.2.0 delivers posts implementation.

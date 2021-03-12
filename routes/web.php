@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Livewire\Posts;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,10 +17,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/posts', function(){
-    return view('posts.index');
-})->name('posts.index');
+Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+
+    Route::get('/posts', function () {
+        return view('posts.index');
+    })->name('posts.index');
+});

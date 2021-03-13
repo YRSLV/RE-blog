@@ -3,10 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/creativetimofficial/tailwind-starter-kit/compiled-tailwind.min.css"
-    />
+    <link rel="stylesheet" href="/css/app.css"/>
     <title>Laravel</title>
 
     <!-- Fonts -->
@@ -130,7 +127,7 @@
                     Copyright © 2021 RE-blog by <a href="https://github.com/YRSLV"
                                                    class="text-gray-600 hover:text-gray-900">YRSLV</a>
                 </div>
-                <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
+                <div class="ml-4 text-center text-sm text-gray-500 sm:ml-0">
                     Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
                 </div>
             </div>

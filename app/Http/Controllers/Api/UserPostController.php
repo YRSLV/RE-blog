@@ -40,7 +40,8 @@ class UserPostController extends Controller
      */
     public function show($id)
     {
-        $userResource = Cache::remember('userResource', Carbon::now()->addMinutes(2), function() use ($id) {
+        $key = 'userResource__' . trim(strval($id));
+        $userResource = Cache::remember($key, Carbon::now()->addMinutes(2), function() use ($id) {
             return new UserResource(User::findOrFail($id));
         });
         return $userResource;

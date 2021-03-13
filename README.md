@@ -12,3 +12,5 @@
 Version 0.1.0 comprises simple blog starter kit with the implementation for application's login, registration, email verification, two-factor authentication, session management and API via Laravel Sanctum.
 
 Release 0.2.0 delivers posts implementation.
+
+Release 0.3.0 brings API implemenation for users and their posts data retrieval by providing user id.

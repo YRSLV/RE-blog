@@ -14,3 +14,5 @@ Version 0.1.0 comprises simple blog starter kit with the implementation for appl
 Release 0.2.0 delivers posts implementation.
 
 Release 0.3.0 brings API implemenation for users and their posts data retrieval by providing user id.
+
+Release 0.4.0 adds improved welcome and dashboard views.

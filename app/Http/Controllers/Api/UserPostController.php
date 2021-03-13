@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\UserResource;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 class UserPostController extends Controller
 {
@@ -38,7 +40,10 @@ class UserPostController extends Controller
      */
     public function show($id)
     {
-        return new UserResource(User::findOrFail($id));
+        $userResource = Cache::remember('userResource', Carbon::now()->addMinutes(2), function() use ($id) {
+            return new UserResource(User::findOrFail($id));
+        });
+        return $userResource;
     }
 
     /**
